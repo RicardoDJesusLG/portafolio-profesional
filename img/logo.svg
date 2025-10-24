@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120">
+  <style>
+    .text-primary { fill: #1c54c4; font-family: 'Segoe UI', sans-serif; font-weight: bold; }
+    .text-secondary { fill: white; font-family: 'Segoe UI', sans-serif; font-size: 16px; }
+    .circle { fill: #1c54c4; }
+    .symbol { fill: white; font-family: 'Courier New', monospace; font-size: 28px; font-weight: bold; }
+  </style>
+
+  <circle cx="60" cy="60" r="45" class="circle"/>
+  <text x="38" y="70" class="symbol"></></text>
+  <text x="130" y="55" font-size="36" class="text-primary">Ricardo Luna</text>
+  <text x="130" y="90" class="text-secondary">Ingeniero en Software | Web, Apps & E-commerce</text>
+</svg>
