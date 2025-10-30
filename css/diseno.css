@@ -68,30 +68,61 @@ footer{
     
 }
 .nav-bg{
-    background-color: var(--color-secundario);
+    background-color: var(--color-cuaternario);
     
 }
-.menu-principal {
-    display: flex;
-    justify-content: space-between;
-    
+/* ===================
+   ESTILOS NAVBAR
+   =================== */
+
+/* Color de fondo de la barra */
+.nav-bg {
+    background-color: var(--color-cuaternario);
 }
 
-.menu-principal a {
+/* Estilo para "Inicio" (el link de la "marca") */
+.menu-principal-brand {
+    color: var(--color-quintario);
+    text-decoration: none;
+    font-size: 2.2rem; /* Un poco más grande para destacar */
+    font-weight: 700;
+    padding: 1rem 0;
+    transition: color 0.2s ease-in-out;
+}
+.menu-principal-brand:hover {
+    color: var(--color-secundario, #f5b371); /* Naranja al pasar el mouse */
+}
+
+/* Estilos para los links de la derecha */
+.navbar-nav .nav-link {
     color: var(--color-quintario);
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
     padding: 1rem;
-    
+    margin-left: 0.5rem; /* Pequeña separación entre links */
+    transition: all 0.2s ease-in-out;
 }
-.menu-principal a:hover{
+
+.navbar-nav .nav-link:hover {
     background-color: #f5b371;
     color: var(--color-cuaternario);
-    padding: 1rem 1rem;
     border-radius: 1rem;
 }
 
+/* --- ESTILOS PARA EL BOTÓN MÓVIL (HAMBURGUESA) --- */
+/* Esto es importante porque tu fondo es oscuro 
+  y el ícono de hamburguesa por defecto es oscuro. 
+*/
+.navbar-toggler {
+    /* Color del borde del botón */
+    border-color: rgba(255, 255, 255, 0.3); 
+}
+
+.navbar-toggler-icon {
+    /* Color de las 3 líneas (es un SVG) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 body {
     font-family: "Roboto", sans-serif;
@@ -106,8 +137,8 @@ body {
 header {
     background-color: var(--color-logo-primario);
     color: var(--color-quintario);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     text-align: center;
     
     
@@ -123,7 +154,7 @@ header {
 }
 
 .portada{
-    background-image: url(../img/portada_Header.png);
+    background-image: url(../img/fondo\ pagina.png);
     background-size: cover; /* o prueba '100% 100%' pero puede deformar */
     background-repeat: no-repeat;
     background-position: center;
@@ -131,6 +162,7 @@ header {
     width: 100%;
     height: 15rem;
 }
+
 
 
 @media (max-width: 800px) {
@@ -474,35 +506,54 @@ header {
 }
 
 .project-card {
-    aspect-ratio: 1 / 1; /* ¡Esto la hace cuadrada! */
-    width: 90%;          /* Ancho en móviles */
-    max-width: 650px;    /* El tamaño máximo en desktop */
-    margin: auto;        /* Centra la tarjeta */
+    /* 1. Eliminamos el aspect-ratio para que no sea cuadrada */
+    /* aspect-ratio: 1 / 1; */ 
     
-    /* Usando tus variables de color */
-    background-color: var(--color-terciario);
+    width: 90%;          
+    
+    /* 2. Aumentamos el ancho máximo como pediste */
+    max-width: 850px;    /* <-- AUMENTADO (era 650px) */
+    
+    /* 3. Fijamos la altura (basada en tu 60vh y 650px anteriores) */
+    height: 650px;       /* <-- AÑADIDO (para mantener la altura) */
+
+    margin: auto;        
+    background-color: var(--color-cuaternario);
     color: var(--color-quintario);
     border: none;
-    
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Importante para los bordes redondeados de la imagen */
+    overflow: hidden; 
 }
 
 .project-card .card-img-top {
-    height: 50%; /* La imagen ocupa la mitad de la tarjeta */
+    /* 1. Dejamos que la altura se ajuste automáticamente */
+    height: auto;
     width: 100%;
-    object-fit: cover; /* Evita que la imagen se deforme */
+    
+    /* 2. Ya no necesitamos 'object-fit' ni 'background-color' */
+    /* porque la imagen ocupará todo el ancho. */
 }
 
+/* --- REEMPLAZA CON ESTA --- */
 .project-card .card-body {
-    height: 50%; /* El texto ocupa la otra mitad */
+    /* 1. Eliminamos la altura fija del 50% */
+    /* height: 50%; */
+
+    /* 2. Le decimos al texto que "crezca" para llenar
+          el espacio vertical que sobre en la tarjeta. */
+    flex-grow: 1;
+
+    /* 3. (Opcional pero recomendado) Si el texto es muy largo, 
+          permitimos scroll SÓLO en el área de texto. */
+    overflow-y: auto;
+
+    /* 4. Mantenemos el resto de tus estilos flex */
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* Distribuye el contenido */
+    justify-content: space-around;
     padding: 1.2rem;
 }
-
 .project-card .card-title {
     font-weight: bold;
     color: var(--color-secundario); /* Título en naranja */
@@ -511,6 +562,10 @@ header {
 /* Tu HTML usa la clase "btn-github" pero no estaba definida.
    Aquí la creamos usando tus colores.
 */
+.logo-hero{
+    width: 50px;
+    height: auto;
+}
 .btn-github {
     background-color: var(--color-secundario);
     border-color: var(--color-secundario);
@@ -538,4 +593,221 @@ header {
 .carousel-indicators [data-bs-target] {
     background-color: var(--color-secundario); /* Puntos naranjas */
 }
+
+
+
+
 /*CARRUSEL*/
+
+
+/*HERO SECTION*/
+.hero {
+  height: 80vh;
+
+background-image: linear-gradient(var(--color-cuaternario), rgba(212, 212, 212, 0.356)), url("../img/fondo-pro.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
+
+/* Efecto de oscurecimiento para mejorar contraste */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.226);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* Animación opcional */
+.hero h1, .hero p, .hero a {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.hero.show h1,
+.hero.show p,
+.hero.show a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- BOTONES DE REDES --- */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  z-index: 2;
+}
+
+/* Estilos específicos para cada red */
+.btn-social.github {
+  background-color: #24292e;
+}
+.btn-social.github:hover {
+  background-color: #6588ac;
+  transform: translateY(-3px);
+}
+
+.btn-social.linkedin {
+  background-color: #0a66c2;
+}
+.btn-social.linkedin:hover {
+  background-color: #0d7ee3;
+  transform: translateY(-3px);
+}
+.btn-social.cv{
+    background-color: var(--color-secundario);
+    transform: translateY(-3px);
+    
+}
+.btn-social.cv:hover {
+  background-color: #f5b371;
+  transform: translateY(-3px);
+}
+
+/* Íconos un poco más grandes */
+.btn-social i {
+  font-size: 1.5rem;
+}
+
+/* Animación de entrada junto con hero */
+.hero.show .btn-social {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+.btn-social {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.bloque-1{
+    background-image: linear-gradient(to top, #e0e6fa 10%, #ffffff 70%);
+    border-color:#f5b371;
+    border-radius: 20px;
+}
+
+/* ===================
+   ESTILOS DEL FOOTER
+   =================== */
+
+.site-footer {
+  /* 1. El color de fondo que pediste */
+  background-color: var(--color-cuaternario);
+
+  /* 2. Un color de texto claro para que contraste */
+  /* (Ajusta --color-quintario si tu variable de blanco se llama diferente) */
+  color: var(--color-quintario, #ffffff);
+
+  /* 3. Estilos generales para centrar y espaciar */
+  padding: 30px 20px; /* Espacio interno (arriba/abajo | izquierda/derecha) */
+  text-align: center;
+  width: 100%;
+  margin-top: 40px; /* Un margen superior para separarlo del contenido */
+}
+
+.site-footer .footer-text {
+  margin: 5px 0; /* Un espacio pequeño entre cada línea de texto */
+  font-size: 0.9rem; /* Un tamaño de letra ligeramente más pequeño */
+  line-height: 1.6; /* Interlineado para que no se vea apretado */
+}
+
+/* Opcional: para que el nombre resalte un poco */
+.site-footer .footer-text strong {
+  font-size: 1.1rem;
+  color: var(--color-secundario, #f68b1f); /* Usamos tu color secundario para acentuar */
+}
+
+/* ===================
+   ESTILOS "SOBRE MÍ"
+   =================== */
+
+.about-me-img {
+  /* Esto hace la imagen perfectamente redonda */
+  border-radius: 50%; 
+  
+  /* Tamaño máximo para que no sea gigante */
+  max-width: 350px; 
+  
+  /* Asegura que la imagen sea un círculo (si no es cuadrada) */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* Evita que la foto se estire */
+  
+  /* Un borde sutil usando tus colores */
+  border: 5px solid var(--color-cuaternario); 
+}
+
+/* Ajuste para móviles */
+@media (max-width: 991px) {
+  .about-me-img {
+      /* En móviles, la hacemos un poco más pequeña */
+      max-width: 250px; 
+  }
+}
+
+/* ===================
+   FONDO ANIMADO CON VANTA.JS
+   =================== */
+
+#vanta-bg {
+    position: fixed; /* Lo fija en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw;   /* Ocupa el 100% del ancho de la ventana */
+    height: 100vh;  /* Ocupa el 100% del alto de la ventana */
+    z-index: -1;    /* Lo envía al fondo, detrás de todo */
+    background-color: #000000; /* Un color de respaldo si Vanta.js no carga */
+}
+
+.content-wrapper {
+    position: relative; /* Necesario para que el z-index de los hijos funcione correctamente */
+    z-index: 1;         /* Asegura que el contenido esté POR ENCIMA del fondo animado */
+    background-color: rgba(0, 0, 0, 0); /* Hace el fondo del wrapper transparente por defecto */
+    min-height: 100vh; /* Asegura que el wrapper ocupe al menos toda la altura de la vista */
+    display: flex;
+    flex-direction: column;
+}
+
+/* También debes asegurarte de que tu body NO tenga un background-color directo
+   que oculte el Vanta.js */
+body {
+    /* ... tus otras propiedades ... */
+    background-color: transparent; /* Asegúrate de que el body sea transparente */
+}
+
+/* Para que el footer se pegue al final si el contenido es corto */
+.content-wrapper main {
+    flex-grow: 1; /* Esto hará que tu main ocupe el espacio disponible */
+}
+
+.fondo{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff6b;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}

@@ -11,240 +11,387 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/diseno.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-3h35yX7zU1+9Qe4g5co1L0rb3hWYZR7RL3cFvEw7TKXvGyl0FdlZe+H0XkuM5PjR8To8rJqIql6tL8AdF7jXag=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <!--MANTA, ANIMACION DEL BODY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
 
 </head>
 <body>
+    <!--AQUI VA EL DIV MANTA PARA EL FONDO DEL BODY-->
+    <div id="vanta-bg"></div>
+    <div class="ccontent-wrapper">
+        <header>
 
-    <header>
-        <div class="contenedor">
-            <h1 class="titulo"><span>Freelancer</span></h1>
+        </header>
+        
+<main>
 
-        </div>
-    </header>
-    <div class = "portada">
-
-    </div>
-
-
-<!--NUEVA NAVBAR-->
+    <!--NUEVA NAVBAR-->
         <div class="nav-bg">
-            <nav class="navbar navbar-expand-lg menu-principal d-flex sticky-top">
-                <div class="container-fluid flex-row">
+            <nav class="navbar navbar-expand-lg nav-bg fixed-top">
+                <div class="container-fluid">
+                    
+                    <a class="nav-link menu-principal-brand" href="./index.html">Inicio</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                                <a class="nav-link" href="#sobre-mi">Sobre mí</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="./index.html#sobre-mi">Sobre mí</a>
+                                <a class="nav-link" href="#formacion">Formación</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="./index.html#tecnologias">Tecnologías</a>
+                                <a class="nav-link" href="#tecnologias">Habilidades</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="./index.html#portafolio">Portafolio</a>
+                                <a class="nav-link" href="#portafolio">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
-<!--NUEVA NAVBAR-->    
+    <!--NUEVA NAVBAR-->    
+    <!-- HERO -->
+        <section class="hero d-flex align-items-center justify-content-center text-center text-white">
+            <div class="hero-content align-items-center justify-content-center">
+                <h1 class="display-4 fw-bold mb-3">Hola, soy Ricardo</h1>
+                <p class="lead mb-4">Ingeniero en Software y Redes | Desarrollador Web & Cisco Lover</p>
 
-    <section>
-        <h1 id="sobre-mi"class="subtitulo servicios">Sobre mi</h1>
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    
-                    <p class="lead historia-texto text-center">
-                        ¡Hola! Soy Ricardo Luna, un apasionado desarrollador web con experiencia 
-                        en la creación de soluciones digitales dinámicas y atractivas. Mi viaje 
-                        en el mundo de la programación comenzó con mi desarrollo profesional en la carrera de Ingeniería en Software
-                        y Redes en donde obtuve conocimientos de planificacion, desarrollo y gestión de proyectos de Ingeniería 
-                        asi como de buenas prácticas durante todo el ciclo de vida del desarrollo de Software.
+                <a href="#portafolio" class="btn btn-warning btn-lg fw-semibold shadow mb-3">
+                Ver mis proyectos
+                </a>
 
-                        Para mí es sumante importante el ser autodidacta ya que, si bien la escuela me brindo conocimientos teoricos sólidos,
-                        el conocimiento de tecnologías de TI y lenguajes de programación lo adquirí en diferentes cursos y certificaciones 
-                    </p>
-
+                <!-- 🔹 Botones de redes -->
+                <div class="social-buttons mt-3">
+                    <a href="https://github.com/RicardoDJesusLG?tab=repositories" target="_blank" class="btn btn-social github">
+                        <img src="./img/github-mark-white.png" alt="GitHub" class="logo-hero">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ricardo-de-jesus-luna-gomez/" target="_blank" class="btn btn-social linkedin">
+                        <img src="./img/InBug-White.png" alt="Linkdn" class="logo-hero">
+                    </a>
+                    <a href="./docs/CV RICARDO LUNA.pdf" class="btn btn-social cv" download>
+                        <img src="./img/curriculum-vitae.png" alt="" class="logo-hero">
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <!-- HERO -->
 
-    <h2 class="subtitulo servicios">Formación Escolar</h2>
+        <section id="sobre-mi" class=" py-5">
+            <h1 class="subtitulo servicios">Sobre mí</h1>
+
+            <div class="container mt-4">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <img src="./img/elegante azul circle sin fondo.png" alt="Foto de Ricardo Luna" class="img-fluid about-me-img shadow-lg">
+                    </div>
+
+                    <div class="col-lg-8">
+                        
+                        <p class="lead historia-texto">
+                            ¡Hola! Soy Ricardo Luna, un apasionado desarrollador web con experiencia 
+                            en la creación de soluciones digitales dinámicas y atractivas. Mi viaje 
+                            en el mundo de la programación comenzó con mi desarrollo profesional en la carrera de Ingeniería en Software
+                            y Redes en donde obtuve conocimientos de planificacion, desarrollo y gestión de proyectos de Ingeniería 
+                            asi como de buenas prácticas durante todo el ciclo de vida del desarrollo de Software.
+                            <br><br> Para mí es sumamente importante el ser autodidacta ya que, si bien la escuela me brindo conocimientos teoricos sólidos,
+                            el conocimiento de tecnologías de TI y lenguajes de programación lo adquirí en diferentes cursos y certificaciones.
+                        </p>
+                    </div>
+
+                </div> 
+            </div> 
+        </section>
+
+        <section id="formacion">
+            <h2 class="subtitulo servicios">Formación Escolar</h2>
+        </section>
+        
 
 
-<main>
-    <section class="servicios">
+    
+        <section class="servicios">
+                        
+                
+                <section class="container-fluid">
+                        <div class ="fondo">
+                            <h3>Intituto Politécnico Nacional</h3>
+                            <p>
+                                <img src="./img/escom.png" alt="" width="150px" height="150px">
+                            </p>
+                            <p class="lead historia-texto text-center">
+                                Curse 5 semestres en la Escuela Superior de Cómputo del Instituto Politécnico Nacional en donde obtuve conocimientos importantes
+                                relacionados a la Ingeniería en Sistemas Computacionales.<br>Conocimientos adquiridos:
+                            </p>
+                            <ul>
+                                <li>Programación en C</li>
+                                <li>Algoritmos y Estructura de Datos</li>
+                                <li>Ingeniería</li>
+                            </ul>     
+                        </div>
                     
-            
-            <section class="container-fluid">
+                </section>
                 
-                    <h3>Intituto Politécnico Nacional</h3>
-                    <p>
-                        <img src="./img/escom.png" alt="" width="150px" height="150px">
-                    </p>
-                    <p class="lead historia-texto text-center">
-                        Curse 5 semestres en la Escuela Superior de Cómputo del Instituto Politécnico Nacional en donde obtuve conocimientos importantes
-                        relacionados a la Ingenieríaen Sistemas Computacionales.<br>Conocimientos adquiridos:
-                    </p>
-                    <ul>
-                        <li>Programación en C</li>
-                        <li>Algoritmos y Estructura de Datos</li>
-                        <li>Ingeniería</li>
-                    </ul>     
+                <section class="container-fluid">
+
+                    <div class="fondo">
+
+                    
+                        <h3>Universidad Tecnológica de México</h3>
+                        <p>
+                            <img src="./img/universidad-tecnologica-de-mexico-seeklogo.png" alt="" width="150px" height="150px">
+                        </p>
+                        <p class="lead historia-texto text-center">Institución en la que concluí mis estudios en Ingeniería en Software y Redes, titulado de forma
+                            directa al obtener un resultado sobresaliente en el examen de egreso de la licenciatura EGEL ISOFT PLUS.<br>Conocimientos adquiridos: 
+                        </p>
+                        <ul>
+                            <li>Administración de proyectos de Ingeniería</li>
+                            <li>Administración de redes CISCO</li>
+                            <li>Implementación de las fases del Ciclo de Vida del Desarrollo de Software</li>
+                        </ul>   
+                    </div> 
+
+                </section>
                 
-            </section>
-            
-            <section class="container-fluid">
-                <h3>Universidad Tecnológica de México</h3>
-                <p>
-                    <img src="./img/universidad-tecnologica-de-mexico-seeklogo.png" alt="" width="150px" height="150px">
-                </p>
-                <p class="lead historia-texto text-center">Institución en la que concluí mis estudios en Ingeniería en Software y Redes, titulado de forma
-                    directa al obtener un resultado sobresaliente en el examen de egreso de la licenciatura EGEL ISOFT PLUS.<br>Conocimientos adquiridos: 
-                </p>
-                <ul>
-                    <li>Administración de proyectos de Ingeniería</li>
-                    <li>Administración de redes CISCO</li>
-                    <li>Implementación de las fases del Ciclo de Vida del Desarrollo de Software</li>
-                </ul>    
+                <section class="container-fluid">
 
-            </section>
-            
-            <section class="container-fluid">
-                <h3>GENERATION México</h3>
-                <p>
-                    <img src="./img/generation.png" alt="" width="150px" height="150px">
-                </p>
-                <p class="lead historia-texto text-center">
-                    Organización sin fines de lucro cque tiene como objetivos capacitar de forma técnica a jóvenes para que puedan 
-                    ingresar al campo laboral de TI. Cursé un BootCamp con una duración de 6 meses.<br>Conocimientos adquiridos: 
-                </p>
-                <ul>
-                    <li>Desarrollo web</li>
-                    <li>Front-end</li>
-                    <li>Back-end</li>
-                </ul>    
+                    <div class="fondo">
+                        <h3>GENERATION México</h3>
+                        <p>
+                            <img src="./img/generation.png" alt="" width="150px" height="150px">
+                        </p>
+                        <p class="lead historia-texto text-center">
+                            Organización sin fines de lucro que tiene como objetivos capacitar de forma técnica a jóvenes para que puedan 
+                            ingresar al campo laboral de TI. Cursé un BootCamp con una duración de 6 meses.<br>Conocimientos adquiridos: 
+                        </p>
+                        <ul>
+                            <li>Desarrollo web</li>
+                            <li>Front-end</li>
+                            <li>Back-end</li>
+                        </ul>    
+                    </div>
+                </section>
 
-            </section>
+        </section>
+        <h1 id = "tecnologias"class="subtitulo servicios">Tecnologías</h1>
 
-    </section>
-    <h1 id = "tecnologias"class="subtitulo servicios">Tecnologías</h1>
-    <section class="container-fluid text-center">
-        <div class="container-fluid">
-            <img src="./img/tecnologias.png" alt="" width="60%">
-        </div>
-    </section>
-    <h1 id="portafolio" class="subtitulo servicios">Portafolio</h1>
-    <section>
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-                
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <section class="container">
+
+            <div class="row align-items-center g-4"> <div class="col-lg-5">
+                    <div class="fondo p-3 text-center">
+                        <img src="./img/tecnologias.png" alt="Tecnologías" class="img-fluid rounded-3">
+                    </div>
                 </div>
 
-                <div class="carousel-inner">
+                <div class="col-lg-7">
+                    <div class="fondo p-4" style="height: 350px;">
+                        
+                        <h3 class="text-center" style="color: var(--color-secundario); font-weight: 700;">
+                            Mis Certificaciones
+                        </h3>
+                        
+                        <ul class="list-unstyled historia-texto mt-3" style="font-size: 1.8rem;">
+                            
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                Python Essentials 1 & 2 - Cisco Networking Academy
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                CCNA I Introduction to Networks - Cisco Networking Academy
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                CCNA II Switching, Routing, and Wireless Essentials - Cisco Networking Academy
+                            </li>
 
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center align-items-center carousel-slide-container">
-                            <div class="card project-card rounded-4 shadow-lg">
-                                <img src="./img/woofBARF.JPG" class="card-img-top" alt="Imagen del Proyecto 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Proyecto 1: Woof & BARF</h5>
-                                    <p class="card-text">Desarrolo de una e-commerce de alimento BARF para perros. Proyecto final en equipo para un BootCamp, 
-                                        en dónde se creó desde cero una marca la cuál debía ser innovadora y moderna. Trabajé en conjunto y liderando 
-                                        el área ténica, desde la elección de colores,
-                                        el desarrollo front-end, el desarrollo back-end, las bases de datos y control de versiones.
-                                    </p>
-                                    <a href="https://github.com/Arukado69/Proyecto-Integrador" class="btn btn-github w-100">
-                                        <i class="fab fa-github"></i> Ver en GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                CCNA III Enterprise Networking, Security, and Automation - Cisco Networking Academy
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                BootCamp Desarrollador JAVA fullstack - GENERATION México
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                Google Data Analytics Professional Certificate - Coursera
+                            </li>                           
+                            <li class="mb-2">
+                                <i class="fa-solid fa-award me-2" style="color: var(--color-secundario);"></i>
+                                Introduction to Information Technology and AWS Cloud - Coursera
+                            </li>
 
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center align-items-center carousel-slide-container">
-                            <div class="card project-card rounded-4 shadow-lg">
-                                <img src="./img/hydroboost.JPG" class="card-img-top" alt="Imagen del Proyecto 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Proyecto 2: HydroBoost</h5>
-                                    <p class="card-text">Proyecto de un día para un Hackaton en equipo, se creó desde cero una landing page junto con su respectivo
-                                        carrito de compras funcional. Como equipo creamos una marca dedicada a la venta de 
-                                        artículos deportivos especializados en deportes acuáticos.
-                                    </p>
-                                    <a href="https://github.com/RicardoDJesusLG/hackaton-v1" class="btn btn-github w-100">
-                                        <i class="fab fa-github"></i> Ver en GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                            </ul>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center align-items-center carousel-slide-container">
-                            <div class="card project-card rounded-4 shadow-lg">
-                                <img src="./img/BlogCafe.JPG" class="card-img-top" alt="Imagen del Proyecto 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Proyecto 3: Blog de café</h5>
-                                    <p class="card-text">Prototipo de un blog para los amantes del café, se pueden encontrar entradas de blog e inscripciones a cursos del blog.</p>
-                                    <a href="https://github.com/RicardoDJesusLG/Blog-Cafe" class="btn btn-github w-100">
-                                        <i class="fab fa-github"></i> Ver en GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center align-items-center carousel-slide-container">
-                            <div class="card project-card rounded-4 shadow-lg">
-                                <img src="./img/pokeapi.JPG" class="card-img-top" alt="Imagen del Proyecto 4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Proyecto 4: Pokedex con PokeAPI</h5>
-                                    <p class="card-text">Proyecto en construcción que busca mostrar de una manera visualmente atractiva cada uno de los pokemon existentes y sus características
-                                        utilizando como base la API de pokemon.
-                                    </p>
-                                    <a href="https://github.com/RicardoDJesusLG/Pokemon-Desafio-IA" class="btn btn-github w-100">
-                                        <i class="fab fa-github"></i> Ver en GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-        </div>
-    </section>
+            </div>
+        </section>
 
 
+        <h1 id="portafolio" class="subtitulo servicios">Portafolio</h1>
+        <section class="">
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center carousel-slide-container">
+                                <div class="card project-card rounded-4 shadow-lg">
+                                    <img src="./img/woofBARF.JPG" class="card-img-top" alt="Imagen del Proyecto 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Proyecto 1: Woof & BARF</h5>
+                                        <p class="card-text">Desarrolo de una e-commerce de alimento BARF para perros. Proyecto final en equipo para un BootCamp, 
+                                            en dónde se creó desde cero una marca la cuál debía ser innovadora y moderna. Trabajé en conjunto y liderando 
+                                            el área ténica, desde la elección de colores,
+                                            el desarrollo front-end, el desarrollo back-end, las bases de datos y control de versiones.
+                                        </p>
+                                        <a href="..." class="btn btn-github w-100">
+                                            <i class="fa-brands fa-github"></i> Ver en GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center carousel-slide-container">
+                                <div class="card project-card rounded-4 shadow-lg">
+                                    <img src="./img/hydroboost.JPG" class="card-img-top" alt="Imagen del Proyecto 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Proyecto 2: HydroBoost</h5>
+                                        <p class="card-text">Proyecto de un día para un Hackaton en equipo, se creó desde cero una landing page junto con su respectivo
+                                            carrito de compras funcional. Como equipo creamos una marca dedicada a la venta de 
+                                            artículos deportivos especializados en deportes acuáticos.
+                                        </p>
+                                        <a href="..." class="btn btn-github w-100">
+                                            <i class="fa-brands fa-github"></i> Ver en GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center carousel-slide-container">
+                                <div class="card project-card rounded-4 shadow-lg">
+                                    <img src="./img/BlogCafe.JPG" class="card-img-top" alt="Imagen del Proyecto 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Proyecto 3: Blog de café</h5>
+                                        <p class="card-text">Prototipo de un blog para los amantes del café, se pueden encontrar entradas de blog e inscripciones a cursos del blog.</p>
+                                        <a href="..." class="btn btn-github w-100">
+                                            <i class="fa-brands fa-github"></i> Ver en GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center carousel-slide-container">
+                                <div class="card project-card rounded-4 shadow-lg">
+                                    <img src="./img/pokeapi.JPG" class="card-img-top" alt="Imagen del Proyecto 4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Proyecto 4: Pokedex con PokeAPI</h5>
+                                        <p class="card-text">Proyecto en construcción que busca mostrar de una manera visualmente atractiva cada uno de los pokemon existentes y sus características
+                                            utilizando como base la API de pokemon.
+                                        </p>
+                                        <a href="..." class="btn btn-github w-100">
+                                            <i class="fa-brands fa-github"></i> Ver en GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+            </div>
+        </section>
+
+
+
+        
+
+    
+        <article><!--AQUI IRIA UNA ENTRADA A BLOG --></article>
 
 </main>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <p class="footer-text"><strong>Ricardo de Jesús Luna Gómez</strong></p>
+                <p class="footer-text">Ingeniería en Software y Redes</p>
+                <p class="footer-text">Desarrollador Java Fullstack</p>
+            </div>
+        </footer>
 
-   
-    <article><!--AQUI IRIA UNA ENTRADA A BLOG --></article>
+    </div>
 
-
-    <footer>Todos los derechos reservados</footer>
+    <script src="./scripts/script.js"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <script>
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            
+            /* --- Colores de la imagen que te gustó --- */
+            color: 0x003053,          // Tu color azul oscuro
+            backgroundColor: 0xdedede,  // Fondo gris claro
+            /* ----------------------------------------- */
+
+            points: 14.00,
+            maxDistance: 17.00,
+            spacing: 14.00
+        })
+    </script>
 
 </body>
 </html>
